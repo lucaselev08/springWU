@@ -1,13 +1,60 @@
-body {
-    margin: 0;
-    gap: 50px;
-    height: 100vh;
+
+
+.sidan {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    background-color: ;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50vh auto auto auto auto;
     grid-template-areas:
-        
-    ;
+        "he"
+        "img"
+        "ma"
+        "as1"
+        "as2"
+        "fo";
+}
+
+header {
+    grid-area: he;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: yellow;
+}
+
+.img {
+    size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+main {
+    grid-area: ma;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.as1 {
+    grid-area: as1;
+    padding: 20px;
+    background: #ddd;
+}
+
+.as2 {
+    grid-area: as2;
+    padding: 20px;
+    background: #ccc;
+}
+
+footer {
+    grid-area: fo;
+    padding: 20px;
+    text-align: center;
+    background: black;
     color: white;
 }
