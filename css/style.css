@@ -1,28 +1,137 @@
 /* generellt */
-body{
+body {
     margin: 0;
+
+
+    .img {
+        grid-area: img;
+        border-radius: 10px;
+
+    }
+
+    .img img {
+        width: 100%;
+    }
+
+    main {
+        grid-area: ma;
+        padding: px;
+        background: #f4f4f4;
+        align-content: center;
+        padding: 50px;
+    }
+
+    .as1 {
+        grid-area: as1;
+        padding: 20px;
+        background: #ddd;
+    }
+
+    .as2 {
+        grid-area: as2;
+        padding: 20px;
+        background: #ccc;
+    }
+
+    footer {
+        grid-area: fo;
+        padding: 20px;
+        text-align: center;
+        background: black;
+        color: white;
+    }
+
+
+
+
+
+
+
 
 }
 
 /* mobil */
-@media (max-width: 600px){
-    .header{
+@media (max-width: 600px) {
+    .header {
         display: none;
-    }   
+    }
 
-     .sidan{
-    display: grid;
-    
-    min-height: 300vh;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 50x 50vh auto auto auto auto 150px;
-    grid-template-areas:
-        "he "
-        "img"
-        "ma "
-        "as1"
-        "as2"
-        "fo ";
+    .sidan {
+        display: grid;
+
+        min-height: 300vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50x 50vh auto auto auto auto 150px;
+        grid-template-areas:
+            "ha "
+            "img"
+            "ma "
+            "as1"
+            "as2"
+            "fo ";
+    }
+
+    .headermobil {
+        grid-area: ha;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: yellow;
+    }
+
+
+
+
+
+
+
+    .menu {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        right: -360px;
+        width: 250px;
+        height: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        transition: 0.3s;
+    }
+
+    .menu.show {
+        right: 0;
+    }
+
+    .menu a {
+        margin: 15px 0;
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+    .menu-button {
+        font-size: 30px;
+        cursor: pointer;
+        display: inline;
+    }
+
+    .fade-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 5;
+    }
+
+    .fade-layer.visible {
+        display: block;
+
     }
 }
 
@@ -30,112 +139,43 @@ body{
 
 /* bara desktop */
 @media(min-width:601px) {
-    
+    .headermobil {
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
 
-.sidan {
-    display: grid;
-    
-    min-height: 300vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 100vh auto auto auto 150px;
-    grid-template-areas:
-        "he he"
-        "img img"
-        "ma ma"
-        "as1 as2"
-        "fo fo";
-}
+    .sidan {
+        display: grid;
 
-
-
-.menu{
-    position: fixed;
-    top:0;
-    right:-250px;
-    width:250px;
-    height:100%;
-    background:white;
-    display:flex;
-    flex-direction:column;
-    padding:40px;
-    transition:0.3s;
-}
-
-.menu.show{
-    right:0;
-}
-
-.menu a{
-    margin:15px 0;
-    text-decoration:none;
-    color:black;
-}
+        min-height: 300vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 100vh auto auto auto 150px;
+        grid-template-areas:
+            "he he"
+            "img img"
+            "ma ma"
+            "as1 as2"
+            "fo fo";
+    }
 
 
 
-.menu-button{
-    font-size:30px;
-    cursor:pointer;
-}
+    .div {
+        overflow: hidden;
 
 
 
+    }
 
+    .header {
+        grid-area: he;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: yellow;
+    }
 
-
-
-
-
-.div{
-    overflow: hidden;
-
-
-
-}
-header {
-    grid-area: he;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: yellow;
-}
-
-/* en box */
-.img {
-    grid-area: img;
-    border-radius:10px;
-
-}
-
-.img img {
-    width:100%;
-}
-main {
-    grid-area: ma;
-    padding: px;
-    background: #f4f4f4;
-    align-content: center;
-    padding: 50px;
-}
-
-.as1 {
-    grid-area: as1;
-    padding: 20px;
-    background: #ddd;
-}
-
-.as2 {
-    grid-area: as2;
-    padding: 20px;
-    background: #ccc;
-}
-
-footer {
-    grid-area: fo;
-    padding: 20px;
-    text-align: center;
-    background: black;
-    color: white;
-}
 }
