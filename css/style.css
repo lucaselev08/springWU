@@ -1,5 +1,7 @@
 /* generellt */
 body {
+    overflow:auto;
+
     margin: 0;
 
 
@@ -23,13 +25,13 @@ body {
 
     .as1 {
         grid-area: as1;
-        padding: 20px;
+        padding: 40px;
         background: #ddd;
     }
 
     .as2 {
         grid-area: as2;
-        padding: 20px;
+        padding: 40px;
         background: #ccc;
     }
 
@@ -39,9 +41,17 @@ body {
         text-align: center;
         background: black;
         color: white;
+
+    }
+    .lista {list-style-type: none;
     }
 
-
+    .header a {
+        color: black;
+        text-decoration: none;
+        font-size: x-large;
+        
+    }
 
 
 
@@ -149,9 +159,9 @@ body {
     .sidan {
         display: grid;
 
-        min-height: 300vh;
+       
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 200px 100vh auto auto auto 150px;
+        grid-template-rows: 200px 100vh auto auto 150px;
         grid-template-areas:
             "he he"
             "img img"
@@ -177,5 +187,19 @@ body {
         padding: 15px;
         background: yellow;
     }
+    .fade-layer{
+        display:none;
+    }
 
 }
+
+
+
+
+
+
+
+
+.om_oss
+
+
