@@ -420,7 +420,7 @@ footer {
 
 
 
-/* sida program cards */
+/* sida studietips cards */
 
 
 /* bara desktop */
@@ -511,6 +511,148 @@ footer {
     }
 
     .programsidan .headermobil {
+        grid-area: ha;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: yellow;
+    }
+
+
+
+    .cards{
+        grid-area: ca;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        margin-top: 20px;
+
+    }
+
+    
+    .cards .specifikacards{
+        max-width: 40%;
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        justify-content: center;
+    }
+    
+    .cards .specifikacards:hover{
+        box-shadow:0px 6px 8px 0px gray;
+        transform: translateY(5);
+        transition-duration: 0.3s;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* sida program cards */
+
+
+/* bara desktop */
+@media screen and (min-width:601px) {
+    .tjanstsidan .headermobil {
+        display: none;
+    }
+
+    .tjanstsidan .header {
+        grid-area: ha;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: yellow;
+
+    }
+
+    .menu {
+
+        display: none;
+    }
+
+    .tjanstsidan {
+        display: grid;
+
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px 300 px auto 150px;
+        grid-template-areas:
+            "ha ha"
+            "te imgh"
+            "ca2 ca2"
+            "fo fo "
+            ;
+    }
+    .cards{
+        grid-area: ca;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        margin-top: 20px;
+
+    }
+
+
+    .cards .specifikacards{
+        max-width: 25%;
+        background-color: yellow;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px;
+        justify-content: center;
+    }
+    
+    .cards .specifikacards:hover{
+        box-shadow:0px 6px 8px 0px gray;
+        transform: translateY(5);
+        transition-duration: 0.3s;
+    }
+
+}
+
+
+
+
+
+/* mobil */
+@media (max-width: 600px) {
+    .tjanstsidan .header {
+
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+
+    .tjanstsidan {
+        display: grid;
+
+        min-height: 300vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto 150px;
+        grid-template-areas:
+            "ha "
+            "te"
+            "img"
+            "ca2"
+            "fo";
+    }
+
+    .tjanstsidan .headermobil {
         grid-area: ha;
         display: flex;
         justify-content: space-between;
