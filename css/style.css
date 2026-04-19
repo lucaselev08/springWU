@@ -39,7 +39,7 @@ h1{
 
 main {
     grid-area: ma;
-    padding: px;
+    padding: 0px;
     background: #f4f4f4;
     align-content: center;
     padding: 50px;
@@ -669,11 +669,7 @@ footer {
 
     }
     
-    .kort .specifikacards:hover{
-        box-shadow:0px 6px 8px 0px gray;
-        transform: translateY(5);
-        transition-duration: 0.3s;
-    }
+
 
 }
 
@@ -696,11 +692,11 @@ footer {
 
         min-height: 300vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px auto 150px;
+        grid-template-rows: 100px auto auto auto 150px;
         grid-template-areas:
             "ha "
             "te"
-            "img"
+            "imgg"
             "ca2"
             "fo";
     }
@@ -711,7 +707,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-        background: yellow;
+        background: #ffff00;
     }
 
 
@@ -728,13 +724,22 @@ footer {
         grid-area: imgg;
 
 
+
     }
 
-    .upplägg{
+    .tjanstsidan .bildglad img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .tjanstsidan .upplägg{
         grid-area: ca2;
         
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content:space-evenly;
         margin-top: 20px;
@@ -743,8 +748,8 @@ footer {
     }
 
 
-    .cards .kort{
-        max-width: 25%;
+    .tjanstsidan .kort{
+        width: fit-content;
         background-color: yellow;
         padding: 20px;
         border-radius: 10px;
@@ -752,10 +757,5 @@ footer {
         justify-content: center;
     }
     
-    .kort .specifikacards:hover{
-        box-shadow:0px 6px 8px 0px gray;
-        transform: translateY(5);
-        transition-duration: 0.3s;
-    }
-
+  
 }
